@@ -38,9 +38,9 @@ while True:
     cv2.putText(annotated_frame, fps_info, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
     # ========== 显示 ==========
-    cv2.imshow('Tennis Ball Tracker', annotated_frame)
+    cv2.imshow("Tennis Ball Tracker", annotated_frame)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
 cap.release()
