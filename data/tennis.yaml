@@ -1,0 +1,7 @@
+path: E:\Desktop\DL\yolov5-master\datasets\data\data
+train: train.txt # train images (relative to 'path') 118287 images
+val: valid.txt # val images (relative to 'path') 5000 images
+
+# Classes
+names:
+  0: tennis ball
