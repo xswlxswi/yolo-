@@ -1,3 +1,5 @@
+import sys
+
 import cv2
 from ultralytics import YOLO
 
@@ -11,7 +13,7 @@ model = YOLO(MODEL_PATH)
 cap = cv2.VideoCapture(0, cv2.CAP_DSHOW)
 if not cap.isOpened():
     print("无法打开摄像头！")
-    exit()
+    sys.exit()
 
 # 调高分辨率，有助于看清远处的网球
 cap.set(cv2.CAP_PROP_FRAME_WIDTH, 640)
@@ -38,9 +40,9 @@ while True:
     cv2.putText(annotated_frame, fps_info, (10, 30), cv2.FONT_HERSHEY_SIMPLEX, 0.7, (0, 0, 255), 2)
 
     # ========== 显示 ==========
-    cv2.imshow('Tennis Ball Tracker', annotated_frame)
+    cv2.imshow("Tennis Ball Tracker", annotated_frame)
 
-    if cv2.waitKey(1) & 0xFF == ord('q'):
+    if cv2.waitKey(1) & 0xFF == ord("q"):
         break
 
 cap.release()
