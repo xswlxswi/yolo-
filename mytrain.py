@@ -8,4 +8,5 @@ if __name__ == "__main__":
         imgsz=640,
         batch=-1,
         cache="ram",
-        workers=1,)
+        workers=1,
+    )
